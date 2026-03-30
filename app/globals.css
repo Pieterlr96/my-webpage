@@ -1,26 +1,116 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Typography */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.03) 3px
+  );
+  pointer-events: none;
+}
+body{
+  background: #0D0D0D;
+}
+.title {
+  font-family: VT323;
+  font-size: 56px;
+  
+  color: #00ff9f;
+  text-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f;
+  transition: opacity 0.05s;
+}
+.title.flicker{
+  opacity: 0.8;
+  text-shadow: none;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.subtitle {
+  font-family: IBM_Plex_Mono;
+  font-size: 16px;
+  color: #01ffff;
+  margin-top: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.heading {
+  font-family: VT323;
+  font-size: 28px;
+  color: #00ff9f;
+  text-shadow: 0 0 4px #00ff9f;
+  transition: opacity 0.05s;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.heading.flicker{
+  opacity: 0.8;
+  text-shadow: none;
 }
+
+.body-text {
+  font-family: IBM_Plex_Mono;
+  font-size: 14px;
+  color: #a1a1aa;
+  margin-top: 12px;
+}
+
+/* Panels */
+.panel {
+  border: 1px solid #4CAF50;
+  padding: 20px;
+  background: #333333;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  color: #c2fe0c;
+}
+
+.skill {
+  font-family: IBM_Plex_Mono;
+  border: 1px solid #c2fe0c;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.card {
+  border: 1px solid #2a2a2a;
+  padding: 16px;
+  background: #0f0f0f;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #00ff9f;
+}
+
+.card-title {
+  font-family: VT323;
+  font-size: 22px;
+  color: #00ff9f;
+}
+.profile { 
+  width: 150px;
+  height: 150px; 
+  overflow: hidden; 
+  border-radius: 50%;
+  position: relative; 
+} 
+.profile img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
