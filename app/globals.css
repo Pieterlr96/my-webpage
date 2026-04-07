@@ -22,10 +22,6 @@ body{
   text-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f;
   transition: opacity 0.05s;
 }
-.title.flicker{
-  opacity: 0.8;
-  text-shadow: none;
-}
 
 .subtitle {
   font-family: IBM_Plex_Mono;
@@ -42,8 +38,9 @@ body{
   transition: opacity 0.05s;
 }
 
-.heading.flicker{
-  opacity: 0.8;
+
+.flicker-letter.flicker {
+  opacity: 0.2;
   text-shadow: none;
 }
 
