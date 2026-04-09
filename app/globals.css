@@ -17,17 +17,18 @@ body{
 .title {
   font-family: VT323;
   font-size: 56px;
-  
   color: #00ff9f;
   text-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f;
   transition: opacity 0.05s;
+  line-height: 1;
+  margin: 0;
 }
 
 .subtitle {
   font-family: IBM_Plex_Mono;
   font-size: 16px;
   color: #01ffff;
-  margin-top: 8px;
+  margin: 0;
 }
 
 .heading {
@@ -98,12 +99,22 @@ body{
   font-size: 22px;
   color: #00ff9f;
 }
+.profile-section {
+  display: flex;
+  flex-direction: row;
+  aling-items: center;
+  gap: 24px;
+}
 .profile { 
   width: 150px;
   height: 150px; 
   overflow: hidden; 
   border-radius: 50%;
   position: relative; 
+  flex-shrink: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 } 
 .profile img { 
   width: 100%;

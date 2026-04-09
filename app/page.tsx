@@ -7,7 +7,7 @@ export default function Home() {
       <main className="w-full max-w-3xl px-8 py-16 flex flex-col gap-12">
 
         {/* HERO */}
-        <section className="flex items-center gap-6">
+        <section style= {{ display: "flex", flexDirection: "row", alignItems: "center", gap: "24px" }}>
           <div className="profile">
             <Image
               src="/imgs/Profile.jpg"
@@ -18,7 +18,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h1 className="title">
+               <h1 className="title">
               PIETER-JACQUES LE ROUX
             </h1>
             <p className="subtitle">
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="card">
               <h3 className="card-title">Personal Website</h3>
               <p className="body-text">
-                A portfolio site built with Next.js and Tailwind CSS.
+                A portfolio site built with Next.js.
               </p>
             </div>
           </div>
