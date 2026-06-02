@@ -74,9 +74,9 @@ export default function Home() {
         <section className="panel">
           <h2 className="heading">{"> CONTACT"}</h2>
           <div className="body-text">
-            <p> email: your@email.com</p>
-            <p>linkedin: linkedin.com/in/yourname</p>
-            <p> github: github.com/yourname</p>
+            <p> email: pieter96.work@gmail.com</p>
+            <p>linkedin: www.linkedin.com/in/software-developer-pj-le-roux/</p>
+            <p> github: github.com/Pieterlr96</p>
           </div>
         </section>
 
