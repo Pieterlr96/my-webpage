@@ -1,9 +1,9 @@
 import Image from "next/image";
+import { TypewriterText, CardWithTypewriter } from "@/components/typewriter";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex justify-center bg-linear-to-b from-zinc-200 to-zinc-600 text-zinc-200">
-      
       <main className="w-full max-w-3xl px-8 py-16 flex flex-col gap-12">
 
         {/* HERO */}
@@ -18,8 +18,12 @@ export default function Home() {
           </div>
 
           <div>
-               <h1 className="title">
-              PIETER-JACQUES LE ROUX
+             <h1>
+                <TypewriterText
+                  text="PIETER-JACQUES LE ROUX"
+                  playOnce
+                  className="title"
+                />
             </h1>
             <p className="subtitle">
               Software Developer | Python | Web Development

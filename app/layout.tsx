@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, VT323} from "next/font/google";
 import "./globals.css";
-import FlickerEffect from "@/components/flicker";
+import { Flicker } from "@/components/flicker";
 
 const vT = VT323({
   variable: "--font-VT323",
@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${vT.variable} ${ibmPlex.variable} antialiased`}>
-          <FlickerEffect />
+          <Flicker />
         {children}
       </body>
     </html>

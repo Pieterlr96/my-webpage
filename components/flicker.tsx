@@ -6,16 +6,19 @@ function wrapLetters(el: HTMLElement): void {
   const text = el.innerText;
   el.innerHTML = text
     .split("")
-    .map(char => 
-      char === " " 
-        ? " " 
+    .map(char =>
+      char === " "
+        ? " "
         : `<span class="flicker-letter">${char}</span>`
     )
     .join("");
 }
 
-function scheduleFlicker(el: HTMLElement): void{
-  const delay: number = Math.random()*18000 + 4800;
+function scheduleFlicker(el: HTMLElement, isFirst: boolean = false): void {
+
+  const delay: number = isFirst
+  ?0
+  :Math.random() * 18000 + 800;
   setTimeout(() => {
     el.classList.add("flicker");
     setTimeout(() => {
@@ -25,22 +28,31 @@ function scheduleFlicker(el: HTMLElement): void{
   }, delay);
 }
 
-export default function FlickerEffect() {
+export function Flicker(): null {
   useEffect(() => {
-    console.log("FlickerEffect mounted");
+    const start = () => {
+      document
+        .querySelectorAll<HTMLElement>(".title, .heading")
+        .forEach(wrapLetters);
 
-    const timeout = setTimeout(() => {
-      // Wrap each letter in a span
-      document.querySelectorAll<HTMLElement>(".title, .heading").forEach(wrapLetters);
+      const flickerTargets =
+        document.querySelectorAll<HTMLElement>(".flicker-letter");
 
-      // Apply flicker to each individual letter span
-      const flickerTargets = document.querySelectorAll<HTMLElement>(".flicker-letter");
-      console.log("Found letters:", flickerTargets.length);
-      flickerTargets.forEach(scheduleFlicker);
-    }, 500);
+      if (flickerTargets.length === 0) return;
 
-    return () => clearTimeout(timeout);
+      const immediateIndex = Math.floor(Math.random() * flickerTargets.length);
+
+      flickerTargets.forEach((el, index) => {
+        scheduleFlicker(el, index === immediateIndex);
+      });
+    };
+
+    window.addEventListener("typewriterComplete", start);
+
+    return () => {
+      window.removeEventListener("typewriterComplete", start);
+    };
   }, []);
 
-    return null;
+  return null;
 }

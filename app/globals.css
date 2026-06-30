@@ -16,7 +16,7 @@ body{
 }
 .title {
   font-family: var(--font-VT323);
-  font-size: 56px;
+  font-size: 50px;
   color: #00ff9f;
   text-shadow: 0 0 10px #00ff9f, 0 0 20px #00ff9f;
   transition: opacity 0.05s;
