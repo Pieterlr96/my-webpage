@@ -76,7 +76,7 @@ body{
   font-size: 13px;
 }
 
-/* Projects */
+/* GitHub */
 .projects {
   display: flex;
   flex-direction: column;
@@ -84,22 +84,115 @@ body{
   margin-top: 12px;
 }
 
-.card {
+.github-card {
   border: 1px solid #2a2a2a;
   padding: 16px;
   background: #0f0f0f;
   transition: all 0.2s ease;
 }
-
-.card:hover {
+.github-card:hover {
   border-color: #00ff9f;
 }
 
+a.github-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.github-card__header {
+  font-family: var(--font-VT323);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
 .card-title {
   font-family: var(--font-VT323);
   font-size: 22px;
   color: #00ff9f;
 }
+.github-card__stars {
+  font-family: var(--font-IBM_Plex_Mono);
+  font-size: 12px;
+  color: #c2fe0c;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.github-card__desc {
+  margin-top: 8px;
+}
+
+.github-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.github-card__lang {
+  font-family: var(--font-IBM_Plex_Mono);
+  color: #00ff9f;
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+.github-card__date {
+  font-size: 11px;
+  color: #52525b;
+  margin-top: 0;
+  margin-left: auto;
+}
+
+.github-feed__more {
+  display: inline-block;
+  margin-top: 16px;
+  color: #00ff9f;
+  text-decoration: none;
+  font-size: 13px;
+  transition: opacity 0.2s;
+}
+
+.github-feed__more:hover {
+  opacity: 0.7;
+}
+
+.github-card--skeleton {
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%   { opacity: 0.3; }
+  50%  { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+.skeleton-line {
+  background: #2a2a2a;
+  border-radius: 2px;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-line--title {
+  height: 22px;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.skeleton-line--body {
+  height: 14px;
+  width: 90%;
+  margin-bottom: 8px;
+}
+
+.skeleton-line--short {
+  height: 14px;
+  width: 30%;
+}
+
 .profile-section {
   display: flex;
   flex-direction: row;

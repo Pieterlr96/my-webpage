@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { TypewriterText, CardWithTypewriter } from "@/components/typewriter";
+import { Suspense } from "react";
+import GitHubFeed from "@/components/GitHubProjectCards";
 
 export default function Home() {
   return (
@@ -54,26 +56,11 @@ export default function Home() {
         </section>
 
         {/* PROJECTS */}
-        <section className="panel">
-          <h2 className="heading">{"> PROJECTS"}</h2>
 
-          <div className="projects">
-            <div className="card">
-              <h3 className="card-title">Task Manager App</h3>
-              <p className="body-text">
-                A desktop task manager built with PyQt and SQLite.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3 className="card-title">Personal Website</h3>
-              <p className="body-text">
-                A portfolio site built with Next.js.
-              </p>
-            </div>
-          </div>
-        </section>
-
+        <Suspense fallback={<p className="body-text">{">"} loading repositories...</p>}>
+          <GitHubFeed />
+        </Suspense>
+        
         {/* CONTACT */}
         <section className="panel">
           <h2 className="heading">{"> CONTACT"}</h2>
