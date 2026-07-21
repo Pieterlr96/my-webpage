@@ -17,7 +17,7 @@ async function getRepos(): Promise<Repo[]> {
    headers["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
  }
  const res = await fetch(
-  "https://api.github.com/users/Pieterlr96/repos?sort=updated&per_page=6",
+  "https://api.github.com/users/Pieterlr96/repos?sort=pushed&per_page=6",
   {
     headers,
         next: { revalidate: 3600 },
