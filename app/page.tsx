@@ -68,6 +68,9 @@ export default function Home() {
             <p> email: pieter96.work@gmail.com</p>
             <p>linkedin: www.linkedin.com/in/software-developer-pj-le-roux/</p>
             <p> github: github.com/Pieterlr96</p>
+            <a href="/CV.pdf" download="Piter_le_Roux_CV.pdf" className="cv-link">
+              Click to Download CV
+            </a>
           </div>
         </section>
 
