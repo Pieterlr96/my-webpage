@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pieter-Jacques le Roux — Portfolio
+
+A personal portfolio website built with Next.js, TypeScript, and CSS. Designed with a retro terminal aesthetic featuring CRT scanlines, phosphor glow effects, and a per-letter flicker animation.
+
+**Live site:** [my-webpage-eight-beige.vercel.app]
+
+---
+
+## Features
+
+- Retro terminal UI with CRT scanline overlay
+- Per-letter randomised flicker animation on headings
+- Responsive single-page layout
+- IBM Plex Mono + VT323 Google Fonts pairing
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | CSS Modules + Tailwind CSS |
+| Fonts | Google Fonts (VT323, IBM Plex Mono) |
+| Deployment | Vercel |
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/Pieterlr96/your-repo-name.git
+cd your-repo-name
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+/
+├── app/
+│   ├── page.tsx                # Main portfolio page
+│   ├── layout.tsx              # Root layout and font setup
+│   └── globals.css             # Global styles and component classes
+├── components/
+│   └── flicker.tsx             # Per-letter flicker animation
+    └──GitHubProjectCards.tsx   # Github section with cards that link to my GitHub projects
+    └── typewriter.tsx          # Typewriter effect that plays on startup of website. 
+└── public/
+    └── imgs/
+        └── Profile.jpg
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Decisions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Why the terminal aesthetic?**
+I wanted the site to reflect my personality rather than use a generic developer portfolio template. The retro CRT look is distinctive and gives me an opportunity to demonstrate CSS techniques like text-shadow glow effects and pseudo-element overlays.
 
-## Deploy on Vercel
+**Why a single-page layout?**
+At this stage the content fits naturally on one page. A multi-page structure would add routing complexity without adding value for the visitor.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**The flicker effect**
+Built without any animation library. The `FlickerEffect` component uses the DOM to wrap each letter in a `<span>`, then schedules randomised opacity drops via `setTimeout` recursion. Each letter has an independent random delay between 4.8s and 22.8s, so the effect never looks mechanical.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Roadmap
+- [ ] Scroll-triggered section fade-in animations (IntersectionObserver)
+- [ ] Additional project cards as projects are completed
+
+---
+
+## Contact
+
+- Email: pieter96.work@gmail.com
+- LinkedIn: [linkedin.com/in/software-developer-pj-le-roux](https://www.linkedin.com/in/software-developer-pj-le-roux/)
+- GitHub: [github.com/Pieterlr96](https://github.com/Pieterlr96)
