@@ -14,7 +14,9 @@ export default function Home() {
             <Image
               src="/imgs/Profile.jpg"
               alt="Profile picture"
-              fill
+              width={150}
+              height={150}
+              priority
               className="object-cover"
             />
           </div>
