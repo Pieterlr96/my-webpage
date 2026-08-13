@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${vT.variable} ${ibmPlex.variable} antialiased`}>
-        {/* <Flicker /> */}
+        <Flicker />
         {children}
       </body>
     </html>
