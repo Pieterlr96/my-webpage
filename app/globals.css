@@ -242,6 +242,7 @@ a.github-card {
   color: #00ff9f;
 }
 .cv-link {
+  display: block;
   color: #ffffff;
   font-family: var(--font-IBM_Plex_Mono);
   font-size: 14px;
