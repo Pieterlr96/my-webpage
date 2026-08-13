@@ -66,7 +66,7 @@ export function TypewriterText({
 
       setDisplayed(text.slice(0, index));
 
-      if (index <= text.length) return;
+      if (index < text.length) return;
 
       clearTypingInterval();
       setStatus("done");
@@ -74,7 +74,7 @@ export function TypewriterText({
       window.dispatchEvent(
         new Event("typewriterComplete"));
     }, speed);
-  }, [clearTypingInterval, speed, text]);
+  }, [clearTypingInterval, speed, text, onComplete]);
 
   /* Hero heading */
   useEffect(() => {
@@ -82,7 +82,9 @@ export function TypewriterText({
     if (hasPlayedRef.current) return;
 
     hasPlayedRef.current = true;
+    const timeOut = setTimeout(() => {
     run();
+    }, 1000);
 
     return clearTypingInterval;
   }, [playOnce, run, clearTypingInterval]);

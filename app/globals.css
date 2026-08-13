@@ -37,7 +37,6 @@ body{
   color: #00ff9f;
   text-shadow: 0 0 4px #00ff9f;
   transition: opacity 0.05s;
-  min-height: 1.5em;
 }
 
 
@@ -71,7 +70,7 @@ body{
   padding: 20px;
   background: #333333;
   margin-left: 6px;
-  min-height: 1.5em;
+  contain: layout;
 }
 
 /* Skills */
@@ -126,7 +125,6 @@ a.github-card {
   font-family: var(--font-VT323);
   font-size: 22px;
   color: #00ff9f;
-  min-height: 1.5em;
 }
 .github-card__stars {
   font-family: var(--font-IBM_Plex_Mono);
