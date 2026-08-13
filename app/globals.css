@@ -37,12 +37,25 @@ body{
   color: #00ff9f;
   text-shadow: 0 0 4px #00ff9f;
   transition: opacity 0.05s;
+  min-height: 1.5em;
 }
 
 
 .flicker-letter.flicker {
   opacity: 0.2;
   text-shadow: none;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;        /* always reserves space */
+  visibility: hidden;  /* hidden but space reserved */
+}
+
+.cursor-idle,
+.cursor-typing,
+.cursor-done {
+  visibility: visible;
 }
 
 .body-text {
