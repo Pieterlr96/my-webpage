@@ -9,7 +9,7 @@ export default function Home() {
       <main className="w-full max-w-3xl px-8 py-16 flex flex-col gap-12">
 
         {/* HERO */}
-        <section style= {{ display: "flex", flexDirection: "row", alignItems: "center", gap: "24px" }}>
+        <section className="profile-section">
           <div className="profile">
             <Image
               src="/imgs/Profile.jpg"
@@ -68,9 +68,13 @@ export default function Home() {
           <h2 className="heading">{"> CONTACT"}</h2>
           <div className="body-text">
             <p> email: pieter96.work@gmail.com</p>
-            <p>linkedin: www.linkedin.com/in/software-developer-pj-le-roux/</p>
-            <p> github: github.com/Pieterlr96</p>
-            <a href="/CV.pdf" download="Piter_le_Roux_CV.pdf" className="cv-link">
+            <a href="https://www.linkedin.com/in/software-developer-pj-le-roux/" target="_blank" rel="noopener noreferrer">
+               linkedin: linkedin.com/in/software-developer-pj-le-roux
+            </a>
+            <a href="https://github.com/Pieterlr96" target="_blank" rel="noopener noreferrer">
+               github: github.com/Pieterlr96
+            </a>
+            <a href="/CV.pdf" download="Pieter_le_Roux_CV.pdf" className="cv-link">
               Click to Download CV
             </a>
           </div>
