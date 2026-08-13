@@ -7,13 +7,16 @@ const vT = VT323({
   variable: "--font-VT323",
   weight: '400',
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 const ibmPlex = IBM_Plex_Mono({
   variable: "--font-IBM_Plex_Mono",
   weight: '400',
-  subsets:["latin"]
-
+  subsets:["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
