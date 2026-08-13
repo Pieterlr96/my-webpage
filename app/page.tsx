@@ -58,11 +58,15 @@ export default function Home() {
         </section>
 
         {/* PROJECTS */}
-
-        <Suspense fallback={<p className="body-text">{">"} loading repositories...</p>}>
+      <div style={{ minHeight: "400px" }}>
+        <Suspense fallback={
+          <section className="panel">
+          <p className="body-text">{">"} loading repositories...</p>
+          </section>
+        }>
           <GitHubFeed />
         </Suspense>
-        
+        </div>
         {/* CONTACT */}
         <section className="panel">
           <h2 className="heading">{"> CONTACT"}</h2>
