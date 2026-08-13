@@ -66,7 +66,7 @@ export function TypewriterText({
 
       setDisplayed(text.slice(0, index));
 
-      if (index < text.length) return;
+      if (index <= text.length) return;
 
       clearTypingInterval();
       setStatus("done");
