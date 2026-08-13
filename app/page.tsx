@@ -72,14 +72,14 @@ export default function Home() {
           <h2 className="heading">{"> CONTACT"}</h2>
           <div className="body-text">
             <p> email: pieter96.work@gmail.com</p>
-            <a href="https://www.linkedin.com/in/software-developer-pj-le-roux/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/software-developer-pj-le-roux/" target="_blank" rel="noopener noreferrer" className="social-link">
                linkedin: linkedin.com/in/software-developer-pj-le-roux
             </a>
 
-            <a href="https://github.com/Pieterlr96" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Pieterlr96" target="_blank" rel="noopener noreferrer" className="social-link">
                github: github.com/Pieterlr96
             </a>
-            
+
             <a href="/CV.pdf" download="Pieter_le_Roux_CV.pdf" className="cv-link">
               Click to Download CV
             </a>
