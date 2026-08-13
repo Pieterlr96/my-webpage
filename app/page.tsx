@@ -75,9 +75,11 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/software-developer-pj-le-roux/" target="_blank" rel="noopener noreferrer">
                linkedin: linkedin.com/in/software-developer-pj-le-roux
             </a>
+
             <a href="https://github.com/Pieterlr96" target="_blank" rel="noopener noreferrer">
                github: github.com/Pieterlr96
             </a>
+            
             <a href="/CV.pdf" download="Pieter_le_Roux_CV.pdf" className="cv-link">
               Click to Download CV
             </a>
