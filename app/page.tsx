@@ -21,7 +21,7 @@ export default function Home() {
             />
           </div>
 
-          <div style={{ minHeight: "60px"}}>
+          <div style={{ minHeight: "150px"}}>
              <h1>
                 <TypewriterText
                   text="PIETER-JACQUES LE ROUX"
