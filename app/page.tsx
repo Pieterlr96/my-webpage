@@ -80,7 +80,7 @@ export default function Home() {
                github: github.com/Pieterlr96
             </a>
 
-            <a href="/CV.pdf" download="Pieter_le_Roux_CV.pdf" className="cv-link">
+            <a href="/Pieter_le_Roux_CV.pdf" download="Pieter_le_Roux_CV.pdf" className="cv-link">
               Click to Download CV
             </a>
           </div>
