@@ -75,6 +75,18 @@ body{
   margin-top: 12px;
 }
 
+.about-text {
+  font-family: var(--font-IBM_Plex_Mono);
+  font-size: 14px;
+  color: #01ffff;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.about-text p:first-child {
+  margin-top: 12px;
+}
+
 /* Panels */
 .panel {
   border: 1px solid #4CAF50;
